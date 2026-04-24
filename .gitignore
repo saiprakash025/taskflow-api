@@ -1,0 +1,7 @@
+node_modules
+.env
+dist
+taskflow-api/node_modules
+taskflow-frontend/node_modules
+taskflow-api/.env
+taskflow-frontend/.env
