@@ -13,18 +13,28 @@ const projectRoutes = require("./routes/projectRoutes");
 const taskRoutes = require("./routes/taskRoutes");
 const apiKeyRoutes = require("./routes/apiKeyRoutes");
 
-
 dotenv.config();
 connectDB();
 
 const app = express();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://taskflow-api-1.vercel.app"
+];
+
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://taskflow-api-1.vercel.app"
-  ]
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like Postman, curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error("CORS not allowed for: " + origin));
+  },
+  credentials: true
 }));
+
 app.use(express.json());
 app.use(morgan("dev"));
 
@@ -47,7 +57,6 @@ app.get("/api/protected", protect, (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-
 
 app.use("/api/auth", authRoutes);
 app.use("/api/projects", projectRoutes);
