@@ -22,7 +22,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://taskflow-api-six.vercel.app"
+    "https://taskflow-api-1.vercel.app"
   ]
 }));
 app.use(express.json());
