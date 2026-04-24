@@ -4,7 +4,7 @@ A production-ready full stack web application for managing projects and tasks wi
 
 **Live Demo:**
 - Frontend: https://taskflow-api-1.vercel.app/login
-- Backend API: https://taskflow-api-1-zlrw.onrender.com 
+- Backend API: https://taskflow-api-1-zlrw.onrender.com
 
 ---
 
@@ -16,7 +16,7 @@ A production-ready full stack web application for managing projects and tasks wi
 | Backend | Node.js, Express.js |
 | Database | MongoDB Atlas, Mongoose |
 | Auth | JWT (JSON Web Tokens), bcryptjs |
-| Logging | Morgan|
+| Logging | Morgan |
 | Rate Limiting | express-rate-limit |
 | Deployment | Vercel (frontend), Render (backend) |
 
@@ -24,64 +24,65 @@ A production-ready full stack web application for managing projects and tasks wi
 
 ## Features
 
--  User registration and login with hashed passwords
--  JWT-based authentication
--  Protected routes with auth middleware
--  Role-based access control (user / admin)
--  Create and manage projects
--  Create, update, and delete tasks
--  Task status tracking (todo / in-progress / done)
--  Task priority levels (low / medium / high)
--  Assign tasks to project members
--  API key generation and middleware
--  Rate limiting (100 requests / 15 mins)
--  Request logging with Morgan
--  Global error handling middleware
+- ✅ User registration and login with hashed passwords
+- ✅ JWT-based authentication
+- ✅ Protected routes with auth middleware
+- ✅ Role-based access control (user / admin)
+- ✅ Create and manage projects
+- ✅ Create, update, and delete tasks
+- ✅ Task status tracking (todo / in-progress / done)
+- ✅ Task priority levels (low / medium / high)
+- ✅ Assign tasks to project members
+- ✅ API key generation and middleware
+- ✅ Rate limiting (100 requests / 15 mins)
+- ✅ Request logging with Morgan
+- ✅ Global error handling middleware
 
 ---
 
 ## Folder Structure
 
-taskflow-api/ ← Root repo
-├── taskflow-api/ ← Backend (Express + MongoDB)
-│ └── src/
-│ ├── config/
-│ │ └── db.js
-│ ├── controllers/
-│ │ ├── authController.js
-│ │ ├── projectController.js
-│ │ ├── taskController.js
-│ │ └── apiKeyController.js
-│ ├── middleware/
-│ │ ├── authMiddleware.js
-│ │ ├── roleMiddleware.js
-│ │ ├── apiKeyMiddleware.js
-│ │ └── errorMiddleware.js
-│ ├── models/
-│ │ ├── User.js
-│ │ ├── Project.js
-│ │ ├── Task.js
-│ │ └── ApiKey.js
-│ ├── routes/
-│ │ ├── authRoutes.js
-│ │ ├── projectRoutes.js
-│ │ ├── taskRoutes.js
-│ │ └── apiKeyRoutes.js
-│ └── server.js
+```
+taskflow-api/                     ← Root repo
+├── taskflow-api/                 ← Backend (Express + MongoDB)
+│   └── src/
+│       ├── config/
+│       │   └── db.js
+│       ├── controllers/
+│       │   ├── authController.js
+│       │   ├── projectController.js
+│       │   ├── taskController.js
+│       │   └── apiKeyController.js
+│       ├── middleware/
+│       │   ├── authMiddleware.js
+│       │   ├── roleMiddleware.js
+│       │   ├── apiKeyMiddleware.js
+│       │   └── errorMiddleware.js
+│       ├── models/
+│       │   ├── User.js
+│       │   ├── Project.js
+│       │   ├── Task.js
+│       │   └── ApiKey.js
+│       ├── routes/
+│       │   ├── authRoutes.js
+│       │   ├── projectRoutes.js
+│       │   ├── taskRoutes.js
+│       │   └── apiKeyRoutes.js
+│       └── server.js
 │
-└── taskflow-frontend/ ← Frontend (React + Vite)
-└── src/
-├── components/
-│ ├── Navbar.jsx
-│ └── ProtectedRoute.jsx
-├── pages/
-│ ├── Login.jsx
-│ ├── Register.jsx
-│ ├── Dashboard.jsx
-│ └── ProjectDetail.jsx
-├── App.jsx
-└── main.jsx
-
+└── taskflow-frontend/            ← Frontend (React + Vite)
+    └── src/
+        ├── components/
+        │   ├── Navbar.jsx
+        │   └── ProtectedRoute.jsx
+        ├── pages/
+        │   ├── Login.jsx
+        │   ├── Register.jsx
+        │   ├── Dashboard.jsx
+        │   └── ProjectDetail.jsx
+        ├── App.jsx
+        └── main.jsx
+```
 
 ---
 
@@ -193,7 +194,7 @@ Frontend runs at: `http://localhost:5173`
 
 ---
 
-## Sample API Request
+## Sample API Requests
 
 ### Register
 
